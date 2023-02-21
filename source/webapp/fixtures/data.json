@@ -1,0 +1,74 @@
+[
+{
+  "model": "webapp.category",
+  "pk": 1,
+  "fields": {
+    "title": "Cars",
+    "description": "Most popular cars"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 2,
+  "fields": {
+    "title": "Phones",
+    "description": "New and popular models of phones"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 3,
+  "fields": {
+    "title": "Alcohol",
+    "description": "From beer to vodka. All kinds of alcohol"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "category": 2,
+    "name": "Bmw X7",
+    "description": "One of the most popular model of Bmw",
+    "added_at": "2023-02-21T05:03:29.778Z",
+    "price": "85000.00",
+    "image": "https://s.auto.drom.ru/i24226/c/photos/fullsize/bmw/x7/bmw_x7_851576.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "category": 2,
+    "name": "Iphone 14 pro Max",
+    "description": "The always-on display and Dynamic Island are two of the main upgraded features on the iPhone 14 Pro and Pro Max. There are plenty of tricks, such as deleting duplicate photos or setting up a widget to identify songs with a couple taps, that will work on any iPhone 14 model.",
+    "added_at": "2023-02-21T05:10:55.509Z",
+    "price": "1099.00",
+    "image": "https://asset.kompas.com/crops/9fjF5pzqYgZzsOZopAbRlqsEamM=/0x0:3464x2309/750x500/data/photo/2022/09/09/631ae3f796604.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "category": 3,
+    "name": "Le Chemin Du Roi Brut",
+    "description": "Our Brut is made with grapes from only the finest vineyards in Champagne, France that have matured to peak ripeness. After pressing, the wine is aged over 4 years on the lees to create a balance of bright and crisp acidity with notes of ripe stone fruits.",
+    "added_at": "2023-02-21T05:15:39.169Z",
+    "price": "150.00",
+    "image": "https://images.vivino.com/thumbs/IZxKTSWzQq2PJ48W3ZTIEg_pb_600x600.png"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "category": 3,
+    "name": "Grey Goose le citron",
+    "description": "Taste: Clean, fresh and zippy. Zesty lemon with a slight bitter note, as one might expect from fresh lemons.",
+    "added_at": "2023-02-21T05:20:00.783Z",
+    "price": "50.00",
+    "image": "http://cdn.shopify.com/s/files/1/0591/1694/5614/products/FREEGIFTTEMPLATE-Botella-fortheresizing_2_00d6a50f-2826-49ce-98c6-0eff2894df84.png?v=1656667798"
+  }
+}
+]
