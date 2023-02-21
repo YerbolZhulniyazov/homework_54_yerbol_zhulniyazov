@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Categories{% endblock %}
+{% block content %}
+    <div class="container">
+        <h3>Categories</h3>
+    </div>
+    {% for category in categories %}
+        <div class="container">
+        <div class="row d-flex card-margin">
+            <div class="col-6 card card-padding">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="padding-category">
+                            {{ category.title }}
+                        </h5>
+                    </div>
+                    <div class="col-6">
+                        <div class="row d-flex justify-content-end">
+                            <div class="col-3 margin-blue-button">
+                                <a class="btn btn-primary edit-button" href="{% url 'category_edit' category.pk %}"
+                                   role="button">Edit</a>
+                            </div>
+                            <div class="col-3 margin-red-button">
+                                <a class="btn btn-danger" href="{% url 'category_delete' category.pk %}"
+                                   role="button">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+{% endblock %}

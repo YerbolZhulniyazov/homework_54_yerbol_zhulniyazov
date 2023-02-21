@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Product{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row d-flex card-product-margin">
+        <div class="col-6 card card-padding">
+            <form action="{% url 'product_edit' product.pk %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <h2>Edit Product</h2>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label"></label>
+                    <input type="text" id="name" name="name" class="form-control"
+                           value="{{ product.name }}">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label"></label>
+                    <input type="text" id="price" name="price" class="form-control"
+                           value="{{ product.price }}">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label"></label>
+                    <input type="text" id="image" name="image" class="form-control"
+                           value="{{ product.image }}">
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label"></label>
+                    <select name="title" id="title" class="form-select">
+                        {% for category in categories %}
+                            <option value="{{ category.title }}">{{ category.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label"></label>
+                    <textarea id="description" name="description" rows="10"
+                              cols="53">{{ product.description }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Edit product</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

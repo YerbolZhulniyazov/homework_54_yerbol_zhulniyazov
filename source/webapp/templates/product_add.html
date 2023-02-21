@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Add Product{% endblock %}
+{% block content %}
+    <div class="container">
+    <div class="row d-flex card-product-margin">
+        <div class="col-4 card card-padding">
+            <form action="{% url 'products_add' %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <h2>Add Product</h2>
+                </div>
+                <div class="mb-3">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Title">
+                </div>
+                <div class="mb-3">
+                    <input type="text" id="price" name="price" class="form-control" placeholder="Price">
+                </div>
+                <div class="mb-3">
+                    <input type="text" id="image" name="image" class="form-control" placeholder="Image url">
+                </div>
+                <div class="mb-3">
+                    <select name="title" id="title" class="form-select">
+                        <option value="" disabled selected hidden>Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.title }}">{{ category.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                        <textarea id="description" name="description" rows="10" cols="43"
+                                  placeholder="Description"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}

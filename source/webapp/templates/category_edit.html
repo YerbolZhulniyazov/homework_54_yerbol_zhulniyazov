@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Category{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row d-flex card-margin">
+        <div class="col-6 card card-padding">
+            <form action="{% url 'category_edit' category.pk %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <h2>Edit Category</h2>
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label"></label>
+                    <input type="text" id="title" name="title" class="form-control"
+                           value="{{ category.title }}">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label"></label>
+                    <textarea id="description" name="description" rows="10"
+                              cols="53">{{ category.description }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Edit category</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
